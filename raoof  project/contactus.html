@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ANAS-MART</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+    height: 100px;
+    border-bottom: 2px solid black;
+    background-color: #2F3C7E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .head {
+    position: absolute;
+    left: 20px;
+}
+
+header .head h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header .h31 {
+    text-align: center;
+    flex: 1;
+}
+
+header .h31 h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+        .nav {
+            background-color: #333;
+        }
+        .nav nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .nav nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #2F3C7E;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #1f2a5c;
+        }
+        footer {
+            text-align: center;
+            height: 70px;
+            background-color: #2F3C7E;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1>A</h1>
+        </div>
+        <div class="h31">
+            <h1>ANAS-MART</h1>
+        </div>
+    </header>
+
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="serv.html">Services</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Message" required rows="5"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <h1>ANAS-MART</h1>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            const name = document.getElementById('name').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || message === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+         
+            alert('Message sent!');
+
+       
+            this.reset();
+        });
+    </script>
+</body>
+</html>
